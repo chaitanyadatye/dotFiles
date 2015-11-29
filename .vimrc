@@ -1,0 +1,19 @@
+syntax enable 
+filetype indent on
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set number
+set showcmd
+set showmatch
+set mouse=a
+set pastetoggle=<F10>
+set showcmd
+set hlsearch
+set incsearch
+set ignorecase
+set nowrap
+set wildmenu
+set wildignore=*.o,*~,*.pyc,*.swp,*.class
+set completeopt-=preview
