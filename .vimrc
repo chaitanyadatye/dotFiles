@@ -1,17 +1,16 @@
+execute pathogen#infect()
 syntax enable 
 filetype indent on
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
 set number
 set showcmd
 set showmatch
-set mouse=a
+"set mouse=a
 set pastetoggle=<F10>
 set showcmd
 set hlsearch
 set incsearch
+let mapleader=','
+nnoremap <Leader><space> :nohlsearch<CR>
 set ignorecase
 set nowrap
 set wildmenu
@@ -38,4 +37,16 @@ set nocompatible
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 
-execute pathogen#infect()
+"This is for indentation guides
+colorscheme default
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
+:set list 
+:set listchars=tab:\|\ 
+filetype plugin indent on
+let g:indent_guides_guide_size = 1
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
