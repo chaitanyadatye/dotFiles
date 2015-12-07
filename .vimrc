@@ -50,3 +50,5 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+"Makes delete key on mac keyboard erase previous character
+set backspace=indent,eol,start
