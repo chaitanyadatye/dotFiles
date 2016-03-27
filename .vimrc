@@ -52,3 +52,22 @@ set softtabstop=4
 set expandtab
 "Makes delete key on mac keyboard erase previous character
 set backspace=indent,eol,start
+
+"Set FZF
+set rtp+=~/.fzf
+
+"Powerline
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+
+"NERDTREE
+map <C-n> :NERDTreeToggle<CR>
+
+"Airline Config
+"Separator left and right
+let g:airline_left_sep='>'
+let g:airline_right_sep='<'
+"Modified detection
+let g:airline_detect_modified=1
+"Paste detection
+let g:airline_detect_paste=1
+
