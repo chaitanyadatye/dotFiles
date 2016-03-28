@@ -1,5 +1,5 @@
 execute pathogen#infect()
-syntax enable 
+syntax enable
 filetype indent on
 set number
 set showcmd
@@ -19,14 +19,15 @@ set wildignore=*.o,*~,*.pyc,*.swp,*.class
 set nocompatible
 "This is used for solarized
 "set background=dark
+"set t_Co=256
 "let g:solarized_termcolors= 256
+"colorscheme solarized
 "let g:solarized_termtrans = 16
 "let g:solarized_bold = 1
 "let g:solarized_underline = 1 
 "let g:solarized_italic = 1
 "let g:solarized_contrast = high
 "let g:solarized_visibility= high
-"colorscheme solarized
 
 "This is for syntastic
 "set statusline+=%#warningmsg#
@@ -63,6 +64,8 @@ set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 map <C-n> :NERDTreeToggle<CR>
 
 "Airline Config
+let g:airline_powerline_fonts = 1
+set laststatus=2
 "Separator left and right
 let g:airline_left_sep='>'
 let g:airline_right_sep='<'
@@ -71,3 +74,8 @@ let g:airline_detect_modified=1
 "Paste detection
 let g:airline_detect_paste=1
 
+"CTRL-P
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+"Set key
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
