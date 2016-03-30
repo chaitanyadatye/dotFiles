@@ -17,6 +17,7 @@ set wildmenu
 set wildignore=*.o,*~,*.pyc,*.swp,*.class
 "set completeopt-=preview
 set nocompatible
+"let python_highlight_all = 1
 "This is used for solarized
 "set background=dark
 "set t_Co=256
@@ -79,3 +80,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 "Set key
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+"NeoComplete
+"let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#auto_completion_start_length = 3

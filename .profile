@@ -1,4 +1,4 @@
-
+export CLICOLOR=1
 # MacPorts Installer addition on 2014-09-20_at_17:48:48: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export HADOOP_HOME=/usr/local/Cellar/hadoop/2.6.0
@@ -20,7 +20,17 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....="cd ../../.."
 
+alias grep='grep --color=auto'
+
 #git status alias
 alias gls="git status"
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+      source $(brew --prefix)/etc/bash_completion
+fi
 
+export GIT_PS1_SHOWDIRTYSTATE=1
+#export PS1='[\u@\h \w$(__git_ps1)]\$ '
+#export PS1='\u@\h \W $ '
+export PROMPT_COMMAND='__git_ps1 "\u@\h:\W" " $ "'
+export GIT_PS1_SHOWCOLORHINTS=1
