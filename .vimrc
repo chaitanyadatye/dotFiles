@@ -40,7 +40,7 @@ set nocompatible
 "let g:syntastic_check_on_wq = 0
 
 "This is for indentation guides
-colorscheme default
+colorscheme tomorrow 
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
