@@ -120,6 +120,9 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+"TagBar
+map <C-t> :TagbarToggle<CR>
+
 "NeoComplete
 "let g:neocomplete#enable_at_startup = 1
 "let g:neocomplete#auto_completion_start_length = 3
