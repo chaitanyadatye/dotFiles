@@ -1,4 +1,5 @@
 execute pathogen#infect()
+call pathogen#helptags()
 syntax enable
 filetype indent on
 set encoding=utf-8
