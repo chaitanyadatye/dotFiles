@@ -16,3 +16,7 @@ Switch to the `~/.vim` directory, and fetch submodules:
 To update all submodules
     
     git submodule foreach git pull origin master
+
+Also has .profile file.
+    
+    mv profile ~/.profile
