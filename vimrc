@@ -41,7 +41,7 @@ set nocompatible
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 "This is for indentation guides
-colorscheme tomorrow 
+colorscheme tomorrow
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
@@ -75,12 +75,11 @@ let g:airline_detect_modified=1
 "Paste detection
 let g:airline_detect_paste=1
 let g:airline_powerline_fonts = 1
-let g:Powerline_symbols = 'fancy'
-  
+let g:airline_theme='badwolf'  
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
+"let g:airline#extensions#tabline#enabled = 1
 "CTRL-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 "Set key
