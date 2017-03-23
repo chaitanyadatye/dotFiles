@@ -22,9 +22,9 @@ set nowrap                                  " don't wrap lines
 set wildmenu                                " visual autocomplete for cmd menu
 set wildignore=*.o,*~,*.pyc,*.swp,*.class   " ignore compiled/useless files
 set nocompatible                            " use all enhancements of vim
-set tabstop=4                               " number of spaces per tab
-set shiftwidth=4                            " set indent to 4 spaces
-set softtabstop=4                           
+set tabstop=3                               " number of spaces per tab
+set shiftwidth=3                            " set indent to 4 spaces
+set softtabstop=3                           
 set expandtab                               " expands tabs to spaces
 "Makes delete key on mac keyboard erase previous character
 set backspace=indent,eol,start
@@ -74,13 +74,13 @@ colorscheme tomorrow
 
 " ==================== INDENT GUIDES ==================================
 
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
-:set list 
-:set listchars=tab:\|\ 
+"let g:indent_guides_auto_colors = 0
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
+set list 
+set listchars=tab:\|\ 
 filetype plugin indent on
-let g:indent_guides_guide_size = 1
+"let g:indent_guides_guide_size = 1
 
 
 " ==================== FOLDING ========================================
