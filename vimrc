@@ -1,24 +1,50 @@
+" VIM Settings
+" Chaitanya Datye 2017
+
+" ==================== PATHOGEN =======================================
+" Plugin Manager - Pathogen
+" Plugins in .vim/bundle
+
 execute pathogen#infect()
 call pathogen#helptags()
-syntax enable
-filetype indent on
-set encoding=utf-8
-set number
-set showcmd
-set showmatch
-"set mouse=a
-set pastetoggle=<F10>
-set showcmd
-set hlsearch
-set incsearch
-let mapleader=','
+
+" ==================== VIM BASICS =====================================
+ 
+syntax enable                               " colors in syntax
+filetype indent on                          " indentation in syntax
+set encoding=utf-8                          " symbols
+set number                                  " line numbers
+set showcmd                                 " show command in bottom bar
+set showmatch                               " highlight matching braces
+"set mouse=a                                " sets use of mouse pointer
+set pastetoggle=<F10>                       " paste copied content as is
+set nowrap                                  " don't wrap lines
+set wildmenu                                " visual autocomplete for cmd menu
+set wildignore=*.o,*~,*.pyc,*.swp,*.class   " ignore compiled/useless files
+set nocompatible                            " use all enhancements of vim
+set tabstop=4                               " number of spaces per tab
+set shiftwidth=4                            " set indent to 4 spaces
+set softtabstop=4                           
+set expandtab                               " expands tabs to spaces
+"Makes delete key on mac keyboard erase previous character
+set backspace=indent,eol,start
+set colorcolumn=80                          " show line marking at col 80
+
+" ==================== SEARCH  ========================================
+
+set hlsearch                                " highlight matches
+set incsearch                               " search incremental as you type
+let mapleader=','                           " reassign map leader to comma
 nnoremap <Leader><space> :nohlsearch<CR>
-set ignorecase
-set nowrap
-set wildmenu
-set wildignore=*.o,*~,*.pyc,*.swp,*.class
-"set completeopt-=preview
-set nocompatible
+set ignorecase                              " ignore case while search
+
+" Smart case searching is enabled when you search and then type '\s'. If you
+" type '\s' again, it will disable smart case searching and searching will go
+" back to ignorecase.
+map \s :set smartcase!<CR>:set smartcase?<CR>
+
+" ==================== SOLARIZED  =====================================
+
 "let python_highlight_all = 1
 "This is used for solarized
 "set background=dark
@@ -32,7 +58,8 @@ set nocompatible
 "let g:solarized_contrast = high
 "let g:solarized_visibility= high
 
-"This is for syntastic
+" ==================== SYNTASTIC ======================================
+
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
@@ -40,8 +67,13 @@ set nocompatible
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
-"This is for indentation guides
+
+" ==================== COLORSCHEME ====================================
+
 colorscheme tomorrow
+
+" ==================== INDENT GUIDES ==================================
+
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
@@ -49,30 +81,29 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
 :set listchars=tab:\|\ 
 filetype plugin indent on
 let g:indent_guides_guide_size = 1
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-"Makes delete key on mac keyboard erase previous character
-set backspace=indent,eol,start
 
-"Set FZF
+
+" ==================== FOLDING ========================================
+
+set foldenable                              " enable folding
+set foldlevelstart=10                       " open most folds by default
+nnoremap <space> za
+set foldmethod=indent                       " fold based on indent level
+
+" ==================== PLUGINS ========================================
+
+" FZF
+
 set rtp+=~/.fzf
 
-"Powerline
+" Powerline
+
 set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 
-"NERDTREE
-map <C-n> :NERDTreeToggle<CR>
+" Airline Config
 
-"Airline Config
 set laststatus=2
-"Separator left and right
-"let g:airline_left_sep='>'
-"let g:airline_right_sep='<'
-"Modified detection
 let g:airline_detect_modified=1
-"Paste detection
 let g:airline_detect_paste=1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='badwolf'  
@@ -80,13 +111,19 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 "let g:airline#extensions#tabline#enabled = 1
-"CTRL-P
+
+" NerdTree
+
+map <C-n> :NERDTreeToggle<CR>
+
+" CtrlP
+
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-"Set key
+nnoremap <leader>. :CtrlPTag<cr>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-"TagBar
+" TagBar
 map <C-t> :TagbarToggle<CR>
 
 "NeoComplete
