@@ -9,7 +9,7 @@ execute pathogen#infect()
 call pathogen#helptags()
 
 " ==================== VIM BASICS =====================================
- 
+
 syntax enable                               " colors in syntax
 filetype indent on                          " indentation in syntax
 set encoding=utf-8                          " symbols
@@ -24,11 +24,15 @@ set wildignore=*.o,*~,*.pyc,*.swp,*.class   " ignore compiled/useless files
 set nocompatible                            " use all enhancements of vim
 set tabstop=3                               " number of spaces per tab
 set shiftwidth=3                            " set indent to 4 spaces
-set softtabstop=3                           
+set softtabstop=3
 set expandtab                               " expands tabs to spaces
 "Makes delete key on mac keyboard erase previous character
 set backspace=indent,eol,start
 set colorcolumn=80                          " show line marking at col 80
+
+"Highlight extra white space"
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 " ==================== SEARCH  ========================================
 
@@ -53,7 +57,7 @@ map \s :set smartcase!<CR>:set smartcase?<CR>
 "colorscheme solarized
 "let g:solarized_termtrans = 16
 "let g:solarized_bold = 1
-"let g:solarized_underline = 1 
+"let g:solarized_underline = 1
 "let g:solarized_italic = 1
 "let g:solarized_contrast = high
 "let g:solarized_visibility= high
@@ -77,8 +81,8 @@ colorscheme tomorrow
 "let g:indent_guides_auto_colors = 0
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
-set list 
-set listchars=tab:\|\ 
+set list
+set listchars=tab:\|\
 filetype plugin indent on
 "let g:indent_guides_guide_size = 1
 
@@ -106,7 +110,7 @@ set laststatus=2
 let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='badwolf'  
+let g:airline_theme='badwolf'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
