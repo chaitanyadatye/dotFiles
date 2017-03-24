@@ -1,2 +1,2 @@
 #!/bin/bash
-for i in ~/.vim/bundle/*; do git -C $i pull; done
+git submodule foreach git pull origin master
