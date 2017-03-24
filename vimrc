@@ -49,18 +49,18 @@ map \s :set smartcase!<CR>:set smartcase?<CR>
 
 " ==================== SOLARIZED  =====================================
 
-"let python_highlight_all = 1
-"This is used for solarized
-"set background=dark
-"set t_Co=256
-"let g:solarized_termcolors= 256
-"colorscheme solarized
-"let g:solarized_termtrans = 16
-"let g:solarized_bold = 1
-"let g:solarized_underline = 1
-"let g:solarized_italic = 1
-"let g:solarized_contrast = high
-"let g:solarized_visibility= high
+" let python_highlight_all = 1
+" This is used for solarized
+" set background=dark
+" set t_Co=256
+" let g:solarized_termcolors= 256
+" colorscheme solarized
+" let g:solarized_termtrans = 16
+" let g:solarized_bold = 1
+" let g:solarized_underline = 1
+" let g:solarized_italic = 1
+" let g:solarized_contrast = high
+" let g:solarized_visibility= high
 
 " ==================== SYNTASTIC ======================================
 
