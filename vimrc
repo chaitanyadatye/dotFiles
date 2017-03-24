@@ -133,3 +133,10 @@ map <C-t> :TagbarToggle<CR>
 "NeoComplete
 "let g:neocomplete#enable_at_startup = 1
 "let g:neocomplete#auto_completion_start_length = 3
+
+" NERDCommenter
+let g:NERDSpaceDelims = 1                    " add space after comment delim
+let g:NERDCompactSexyComs = 1                " comments sexily!
+let g:NERDDefaultAlign = 'left'              " align line-wise comment delim to left
+let g:NERDCommentEmptyLines = 1              " useful when commenting region
+let g:NERDTrimTrailingWhitespace = 1         " trims ws when uncommenting
