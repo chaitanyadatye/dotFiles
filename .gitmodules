@@ -49,3 +49,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "/Users/cdatye/.vim/bundle/vim-go"]
+	path = /Users/cdatye/.vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
