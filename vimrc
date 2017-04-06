@@ -140,3 +140,13 @@ let g:NERDCompactSexyComs = 1                " comments sexily!
 let g:NERDDefaultAlign = 'left'              " align line-wise comment delim to left
 let g:NERDCommentEmptyLines = 1              " useful when commenting region
 let g:NERDTrimTrailingWhitespace = 1         " trims ws when uncommenting
+
+" Vim-Go
+let g:go_disable_autoinstall = 0
+let g:go_highlight_functions = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_format_strings = 1
