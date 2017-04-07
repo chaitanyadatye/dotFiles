@@ -141,3 +141,31 @@ let g:go_highlight_build_constraints = 1
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_format_strings = 1
+
+" Cscope
+if has('cscope')
+   set cscopetag cscopeverbose
+
+   if has('quickfix')
+      set cscopequickfix=s-,c-,d-,i-,t-,e-
+   endif
+
+   cnoreabbrev csa cs add
+   cnoreabbrev csf cs find
+   cnoreabbrev csk cs kill
+   cnoreabbrev csr cs reset
+   cnoreabbrev css cs show
+   cnoreabbrev csh cs help
+
+   command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
+endif
+
+" Cscope mappings
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>   
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>  
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>  
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>  
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>  
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>  
+nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
