@@ -78,14 +78,9 @@ colorscheme tomorrow
 
 " ==================== INDENT GUIDES ==================================
 
-"let g:indent_guides_auto_colors = 0
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
 set list
 set listchars=tab:\|\ 
 filetype plugin indent on
-"let g:indent_guides_guide_size = 1
-
 
 " ==================== FOLDING ========================================
 
@@ -129,10 +124,6 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " TagBar
 map <C-t> :TagbarToggle<CR>
-
-"NeoComplete
-"let g:neocomplete#enable_at_startup = 1
-"let g:neocomplete#auto_completion_start_length = 3
 
 " NERDCommenter
 let g:NERDSpaceDelims = 1                    " add space after comment delim
