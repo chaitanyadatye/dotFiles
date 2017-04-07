@@ -77,10 +77,13 @@ map \s :set smartcase!<CR>:set smartcase?<CR>
 colorscheme tomorrow
 
 " ==================== INDENT GUIDES ==================================
-
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
 set list
 set listchars=tab:\|\ 
 filetype plugin indent on
+let g:indent_guides_guid_size = 1
 
 " ==================== FOLDING ========================================
 
