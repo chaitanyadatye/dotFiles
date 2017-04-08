@@ -84,6 +84,9 @@ set list
 set listchars=tab:\|\ 
 filetype plugin indent on
 "let g:indent_guides_guid_size = 1
+"autocmd VimEnter,WinEnter,BufNewFile,BufRead,BufEnter,TabEnter * IndentLinesReset
+let g:indentLine_color_term = 239
+let g:indentLine_char = '|'
 
 " ==================== FOLDING ========================================
 
