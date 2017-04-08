@@ -77,18 +77,14 @@ map \s :set smartcase!<CR>:set smartcase?<CR>
 colorscheme tomorrow
 
 " ==================== INDENT GUIDES ==================================
-"let g:indent_guides_auto_colors = 0
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=black ctermbg=darkgrey
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=black ctermbg=darkgrey
+
+filetype plugin indent on
+" If indentation is using tabs
 set list
 set listchars=tab:\|\ 
-filetype plugin indent on
-"let g:indent_guides_guid_size = 1
-let g:indentLine_enabled = 1
-let g:indentLine_color_term = 239
-let g:indentLine_char = '|'
-"autocmd BufRead * :IndentLinesEnable
-let g:indentLine_setConceal = 0
+" If indentation is using spaces - IndentLines works best. Customization --
+"let g:indentLine_color_term = 239
+"let g:indentLine_char = '|'
 
 " ==================== FOLDING ========================================
 
