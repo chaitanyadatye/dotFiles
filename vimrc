@@ -130,11 +130,11 @@ let g:ctrlp_cmd = 'CtrlP'
 map <C-t> :TagbarToggle<CR>
 
 " NERDCommenter
-let g:NERDSpaceDelims = 1                    " add space after comment delim
-let g:NERDCompactSexyComs = 1                " comments sexily!
-let g:NERDDefaultAlign = 'left'              " align line-wise comment delim to left
-let g:NERDCommentEmptyLines = 1              " useful when commenting region
-let g:NERDTrimTrailingWhitespace = 1         " trims ws when uncommenting
+" let g:NERDSpaceDelims = 1                    " add space after comment delim
+" let g:NERDCompactSexyComs = 1                " comments sexily!
+" let g:NERDDefaultAlign = 'left'              " align line-wise comment delim to left
+" let g:NERDCommentEmptyLines = 1              " useful when commenting region
+" let g:NERDTrimTrailingWhitespace = 1         " trims ws when uncommenting
 
 " Vim-Go
 let g:go_disable_autoinstall = 0
