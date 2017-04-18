@@ -77,6 +77,7 @@ map \s :set smartcase!<CR>:set smartcase?<CR>
 " colorscheme tomorrow
 set background=dark
 colorscheme gruvbox 
+" let g:gruvbox_contrast_dark='hard'
 
 " ==================== INDENT GUIDES ==================================
 
