@@ -74,7 +74,9 @@ map \s :set smartcase!<CR>:set smartcase?<CR>
 
 " ==================== COLORSCHEME ====================================
 
-colorscheme tomorrow
+" colorscheme tomorrow
+set background=dark
+colorscheme gruvbox 
 
 " ==================== INDENT GUIDES ==================================
 
