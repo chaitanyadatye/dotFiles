@@ -91,10 +91,10 @@ set listchars=tab:\|\
 
 " ==================== FOLDING ========================================
 
-set foldenable                              " enable folding
-set foldlevelstart=10                       " open most folds by default
-nnoremap <space> za
-set foldmethod=indent                       " fold based on indent level
+"set foldenable                              " enable folding
+"set foldlevelstart=10                       " open most folds by default
+"nnoremap <space> za
+"set foldmethod=indent                       " fold based on indent level
 
 " ==================== PLUGINS ========================================
 
@@ -130,7 +130,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " TagBar
-map <C-t> :TagbarToggle<CR>
+map <C-b> :TagbarToggle<CR>
 
 " NERDCommenter
 " let g:NERDSpaceDelims = 1                    " add space after comment delim
@@ -153,9 +153,9 @@ let g:go_highlight_format_strings = 1
 if has('cscope')
    set cscopetag cscopeverbose
 
-   if has('quickfix')
-      set cscopequickfix=s-,c-,d-,i-,t-,e-
-   endif
+"   if has('quickfix')
+"      set cscopequickfix=s-,c-,d-,i-,t-,e-
+"   endif
 
    cnoreabbrev csa cs add
    cnoreabbrev csf cs find
