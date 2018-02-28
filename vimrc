@@ -130,7 +130,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " TagBar
-map <C-t> :TagbarToggle<CR>
+map <C-b> :TagbarToggle<CR>
 
 " NERDCommenter
 " let g:NERDSpaceDelims = 1                    " add space after comment delim

@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/chaitanyadatye/UIUC/Academics/Spring 2016/CS 225 TA/pl-cs225/questions/exam2-animal-shelter-1b'
+let g:netrw_dirhist_2='/Users/chaitanyadatye/UIUC/Academics/Spring 2016/CS 225 TA/pl-cs225/questions/exam2-animal-shelter-1a'
+let g:netrw_dirhist_3='/Users/chaitanyadatye/UIUC/Academics/Spring 2016/CS 225 TA/hourExam2_files'
+let g:netrw_dirhist_4='/Users/chaitanyadatye/UIUC/Academics/Fall 2015/CS 225 TA/CS225_repository/mp4_solution'
+let g:netrw_dirhist_5='/Users/chaitanyadatye/UIUC/Academics/Spring 2016/CS 225 TA/hourExam2_files'
