@@ -49,18 +49,18 @@ map \s :set smartcase!<CR>:set smartcase?<CR>
 
 " ==================== SOLARIZED  =====================================
 
-" let python_highlight_all = 1
+let python_highlight_all = 1
 " This is used for solarized
-" set background=dark
+set background=dark
 " set t_Co=256
 " let g:solarized_termcolors= 256
-" colorscheme solarized
-" let g:solarized_termtrans = 16
-" let g:solarized_bold = 1
-" let g:solarized_underline = 1
-" let g:solarized_italic = 1
-" let g:solarized_contrast = high
-" let g:solarized_visibility= high
+colorscheme solarized
+let g:solarized_termtrans = 16
+let g:solarized_bold = 1
+let g:solarized_underline = 1
+let g:solarized_italic = 1
+let g:solarized_contrast = "high"
+let g:solarized_visibility = "high"
 
 " ==================== SYNTASTIC ======================================
 
@@ -74,7 +74,7 @@ map \s :set smartcase!<CR>:set smartcase?<CR>
 
 " ==================== COLORSCHEME ====================================
 
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
 " set background=dark
 " colorscheme gruvbox 
 " let g:gruvbox_contrast_dark='hard'
@@ -112,10 +112,11 @@ set laststatus=2
 let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='badwolf'
+let g:airline_theme='solarized'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+let g:airline#extensions#tagbar#enabled = 0
 "let g:airline#extensions#tabline#enabled = 1
 
 " NerdTree
