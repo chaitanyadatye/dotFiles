@@ -1,22 +1,28 @@
 export CLICOLOR=1
-# MacPorts Installer addition on 2014-09-20_at_17:48:48: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 alias ll="ls -ltra"
 
 # Default editor = vim
 export EDITOR=vim
-
-#vi-vim
 alias vi='vim'
 
-#cd..=cd ..
-alias cd..='cd ..'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....="cd ../../.."
+# Tmux aliases
+alias tls="tmux ls"
+alias ta="tmux attach"
+alias tkill="tmux kill-session"
+alias tnew="tmux new-sesion"
 
-alias grep='grep --color=auto'
+# Mkcd
+alias mkcd='_(){ mkdir $1; cd $1; }; _'
+
+# Refresh
+alias refresh="source ~/.zshrc"
+
+# Alias for vimrc, profile and zshrc
+alias vimrc="vi ~/.vimrc"
+alias profile="vi ~/.profile"
+alias zshrc="vi ~/.zshrc"
 
 #git status alias
 alias gls="git status"
@@ -31,7 +37,7 @@ alias untar="tar -xvzf"
 #function to extract different files
 extract () {
     if [ -f $1 ] ; then
-    ¦   case $1 in
+        case $1 in
             *.tar.bz2)   tar xjf $1     ;;  
             *.tar.gz)    tar xzf $1     ;;  
             *.bz2)       bunzip2 $1     ;;  
@@ -46,16 +52,18 @@ extract () {
             *)     echo "'$1' cannot be extracted via extract()" ;;
         esac
     else
-    ¦   echo "'$1' is not a valid file"
-    ¦   fi  
+        echo "'$1' is not a valid file"
+        fi  
     }
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-      source $(brew --prefix)/etc/bash_completion
-fi
+# DBC connection
+function mydbc() {
+    ssh -t cdatye@pa-dbc1101.eng.vmware.com 'cd /dbc/pa-dbc1101/cdatye; zsh'
+}
 
-export GIT_PS1_SHOWDIRTYSTATE=1
-#export PS1='[\u@\h \w$(__git_ps1)]\$ '
-#export PS1='\u@\h \W $ '
-export PROMPT_COMMAND='__git_ps1 "\u@\h:\W" " $ "'
-export GIT_PS1_SHOWCOLORHINTS=1
+# Scp to dbc
+function dbcscp() {
+    scp "$1" cdatye@pa-dbc1101.eng.vmware.com:/dbc/pa-dbc1101/cdatye
+}
+
+source ~/.iterm2_shell_integration.zsh
