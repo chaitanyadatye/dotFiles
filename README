@@ -31,3 +31,6 @@ To remove a submodule
 Also has .profile file.
     
     mv profile ~/.profile
+
+Powerline fonts -
+https://gist.github.com/kevin-smets/8568070
