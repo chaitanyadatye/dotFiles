@@ -22,9 +22,9 @@ set nowrap                                  " don't wrap lines
 set wildmenu                                " visual autocomplete for cmd menu
 set wildignore=*.o,*~,*.pyc,*.swp,*.class   " ignore compiled/useless files
 set nocompatible                            " use all enhancements of vim
-set tabstop=4                               " number of spaces per tab
-set shiftwidth=4                            " set indent to 4 spaces
-set softtabstop=4
+set tabstop=2                               " number of spaces per tab
+set shiftwidth=2                            " set indent to 4 spaces
+set softtabstop=2
 set expandtab                               " expands tabs to spaces
 "Makes delete key on mac keyboard erase previous character
 set backspace=indent,eol,start
@@ -34,6 +34,13 @@ set colorcolumn=80                          " show line marking at col 80
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
 " ==================== SEARCH  ========================================
 
 set hlsearch                                " highlight matches
